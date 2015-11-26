@@ -1,8 +1,129 @@
-<html>
+<!doctype html>
 <head>
-<title>Hello World</title>
+  <title>Todd Magazine</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+  @font-face {
+    font-family: 'Fort';
+    src: url("Fort-Extralight.otf") format('opentype');
+    font-weight: 200;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Fort';
+    src: url("Fort-ExtralightItalic.otf") format('opentype');
+    font-weight: 200;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: 'Fort';
+    src: url("Fort-Book.otf") format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Fort';
+    src: url("Fort-BookItalic.otf") format('opentype');
+    font-weight: normal;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: 'Fort';
+    src: url("Fort-Bold.otf") format('opentype');
+    font-weight: bold;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Fort';
+    src: url("Fort-BoldItalic.otf") format('opentype');
+    font-weight: bold;
+    font-style: italic;
+  }
+  html {
+    height: 100%;
+    overflow: hidden;
+  }
+  body {
+    font-family: 'Fort';
+    background: url('IMG_0025_crop.jpg') bottom center no-repeat;
+    height: 100%;
+    overflow: hidden;
+    background-size: cover;
+    margin: 0; padding: 0;
+    color: white;
+    text-align: center;
+  }
+  header {
+    background: -moz-linear-gradient(top, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0) 100%);
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0.4) 50%,rgba(0,0,0,0) 100%);
+    background: linear-gradient(to bottom, rgba(0,0,0,0.4) 50%,rgba(0,0,0,0) 100%);
+    padding: 3vw 0 12vw;
+  }
+  h1 {
+    font-size: 12.5vw;
+    margin: 0;
+    font-weight: normal;
+    text-shadow: 0px 0px 4px rgba(0,0,0,0.5);
+  }
+  h2 {
+    font-size: 5.73vw;
+    margin: -2.5vw 5vw 0 0;
+    text-align: right;
+    font-weight: 200;
+    text-shadow: 0px 0px 4px black;
+  }
+  section {
+    position: absolute;
+    bottom: 30vw;
+    text-align: right;
+    width: 60vw;
+    right: 3vw;
+  }
+  section h1 {
+    font-size: 6vw;
+    line-height: 6.5vw;
+  }
+  section h2 {
+    color: white;
+    text-shadow: 0px 0px 3px black;
+    margin: 0;
+    font-size: 4vw;
+    text-transform: uppercase;
+  }
+  .bottom {
+    text-align: left;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+  .price {
+    font-family: Helvetica, sans-serif;
+    font-size: 3.5vw;
+    margin-left: 1vw;
+  }
+  .upc {
+    display: inline-block;
+    background: url(upc.jpg) left bottom no-repeat;
+    background-size: contain;
+    width: 30vw;
+    height: 19.375vw;
+    margin-left: 1vw;
+  }
+  </style>
 </head>
 <body>
-<h1>Hello world!</h1>
+  <header>
+    <h1>Todd Magazine</h1>
+    <h2>Winter 2015</h2>
+  </header>
+  <section>
+    <h2>Feature</h2>
+    <h1>Todd Smith shares his secret of perfect hair in the great outdoors</h1>
+  </section>
+  <div class="bottom">
+    <div class="price">US$4.95/CA$29.95</div>
+    <div class="upc"></div>
+  </div>
+  <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 </body>
 </html>
