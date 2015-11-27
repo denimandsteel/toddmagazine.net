@@ -138,10 +138,15 @@
     { "section": "Food", "title": "How this Todd lived on 500 calories a day" },
     { "section": "Travel", "title": "Todds in Qatar: what to see and do" },
   ];
+  var original = articles.slice();
   function toddArticle() {
     var index = Math.floor(Math.random()*articles.length);
     document.querySelector('section h2').textContent = articles[index]['section'];
     document.querySelector('section h1').textContent = articles[index]['title'];
+    articles.splice(index, 1);
+    if (articles.length === 0) {
+      articles = original.slice();
+    }
   }
   toddArticle();
   document.querySelector('.bottom').addEventListener('click', function(e) {
