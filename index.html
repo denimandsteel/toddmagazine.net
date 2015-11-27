@@ -1,6 +1,6 @@
 <!doctype html>
 <head>
-  <title>Todd Magazine</title>
+  <title>TODD Magazine</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
   @font-face {
@@ -96,6 +96,7 @@
     position: absolute;
     bottom: 0;
     width: 100%;
+    cursor: pointer;
   }
   .price {
     font-family: Helvetica, sans-serif;
@@ -114,7 +115,7 @@
 </head>
 <body>
   <header>
-    <h1>Todd Magazine</h1>
+    <h1>TODD Magazine</h1>
     <h2>Winter 2015</h2>
   </header>
   <section>
@@ -125,5 +126,24 @@
     <div class="price">US$4.95/CA$29.95</div>
     <div class="upc"></div>
   </div>
+  <script type="text/javascript">
+  var articles = [
+    { "section": "Feature", "title": "Todd Smith shares his secret of perfect hair in the great outdoors" },
+    { "section": "Quiz", "title": "Which Todd do you want for Christmas?" },
+    { "section": "Gear Guide", "title": "10 scarves for the Todd in your life" },
+    { "section": "Todd Pride", "title": "I'm not Thomas anymore, and so can you" },
+    { "section": "Politics", "title": "Is America ready for a President Todd?" },
+  ];
+  function toddArticle() {
+    var index = Math.floor(Math.random()*articles.length);
+    document.querySelector('section h2').textContent = articles[index]['section'];
+    document.querySelector('section h1').textContent = articles[index]['title'];
+  }
+  toddArticle();
+  document.querySelector('.bottom').addEventListener('click', function(e) {
+    toddArticle();
+    e.preventDefault();
+  })
+  </script>
 </body>
 </html>
