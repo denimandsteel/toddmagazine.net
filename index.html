@@ -45,7 +45,7 @@
   }
   body {
     font-family: 'Fort';
-    background: url('IMG_0025_crop.jpg') bottom center no-repeat;
+    /*background: url('img/IMG_0025_crop.jpg') bottom center no-repeat;*/
     height: 100%;
     overflow: hidden;
     background-size: cover;
@@ -115,7 +115,7 @@
   }
   .upc {
     display: inline-block;
-    background: url(upc.jpg) left bottom no-repeat;
+    background: url(img/upc.jpg) left bottom no-repeat;
     background-size: contain;
     width: 30vw;
     height: 19.375vw;
@@ -136,6 +136,7 @@
     <div class="price">US$6.95/CA$29.95</div>
     <div class="upc"></div>
   </div>
+  <div id="skm"></div>
   <script type="text/javascript">
   var articles = [
     { "section": "Feature", "title": "Todd Smith shares his secret of perfect hair in the great outdoors" },
@@ -173,7 +174,7 @@
     { "section": "Movies", "title": "Bill Murray speaks out: Todd is more funny than Ghostbusters" },
     { "section": "Style", "title": "That's Dapper! A Todd's guide to looking good without going broke" },
     { "section": "Todd Pride", "title": "Todds with Heart raises 1.2 million in 5 days" },
-      
+
   ];
   var original = articles.slice();
   function toddArticle() {
@@ -189,7 +190,25 @@
   document.querySelector('.bottom').addEventListener('click', function(e) {
     toddArticle();
     e.preventDefault();
-  })
+  });
+
+  var heroImages=[
+    'img/cuba_1478.jpg',
+    'img/cuba_1539.jpg',
+    'img/cuba_1547.jpg',
+    'img/cuba_1665.jpg',
+    'img/cuba_1777.jpg',
+    'img/cuba_1794.jpg',
+    'img/cuba_1823.jpg',
+    'img/IMG_0025_crop.jpg'
+  ]
+
+  var randomNumber = Math.floor(Math.random() * heroImages.length);
+  var bgImg = 'url(' + heroImages[randomNumber] + ')';
+  var toddsHardBody = document.getElementsByTagName('body')[0];
+  toddsHardBody.style.backgroundImage = bgImg;
+
+
   </script>
 </body>
 </html>
